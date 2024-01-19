@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require_once'functions.php';
 
 
@@ -31,7 +32,7 @@ require_once'functions.php';
             print_msg('Password berhasil diubah.', 'success');
         }
     }elseif($act=='logout'){
-        unset($_SESSION[login]);
+        unset($_SESSION['login']);
         header("location:login.php");
     } 
     /** ALTERNATIF **/
