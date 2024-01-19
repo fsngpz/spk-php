@@ -15,9 +15,9 @@ require_once'functions.php';
             print_msg("Salah kombinasi username dan password.");
         } 
     }else if ($mod=='password'){
-        $pass1 = $_POST[pass1];
-        $pass2 = $_POST[pass2];
-        $pass3 = $_POST[pass3];
+        $pass1 = $_POST['pass1'];
+        $pass2 = $_POST['pass2'];
+        $pass3 = $_POST['pass3'];
         
         $row = $db->get_row("SELECT * FROM tb_admin WHERE user='$_SESSION[login]' AND pass='$pass1'");        
         
